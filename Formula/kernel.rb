@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "CLI for Kernel deployment and invocation"
   homepage "https://docs.onkernel.com"
-  version "0.1.9"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.1.9/kernel_0.1.9_darwin_amd64.tar.gz"
-      sha256 "b09ab2f3f664fb7652cd48270322caae0a3a01ae1ce6d202f3ac98470123065f"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.2.0/kernel_0.2.0_darwin_amd64.tar.gz"
+      sha256 "2ea14a42364c7f1c022ee6e26c16469331818e42e633a2a92e0c60b0034f4742"
 
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.1.9/kernel_0.1.9_darwin_arm64.tar.gz"
-      sha256 "e14aaef81526198256b901d5316275f722a34aeb37f293f18b35e0c27254dbbf"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.2.0/kernel_0.2.0_darwin_arm64.tar.gz"
+      sha256 "450b23ddd53385fda6c17dffdf6fa66f1a48613378b289693c4da46b8cac348a"
 
       def install
         bin.install "kernel"
@@ -28,15 +28,15 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.1.9/kernel_0.1.9_linux_amd64.tar.gz"
-      sha256 "7a50c6ef02c19fbe056b22d45f02b7598e7a0a5931a7579240da0d1189d0caf4"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.2.0/kernel_0.2.0_linux_amd64.tar.gz"
+      sha256 "424fb860fdadce72589cf16e5a89fd59c5e7be4d6d9fd0553e4e68d57bfb3128"
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.1.9/kernel_0.1.9_linux_arm64.tar.gz"
-      sha256 "59379a77516ddc851cab2e17ffff183ade4e21a6bc80e50b1960817118863950"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.2.0/kernel_0.2.0_linux_arm64.tar.gz"
+      sha256 "750ccfc053b31ad616c39e9962dff5a4969e69312959d782b294c2cf69f0330d"
       def install
         bin.install "kernel"
       end
