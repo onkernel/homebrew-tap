@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://docs.onkernel.com"
-  version "0.4.6"
+  version "0.4.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.6/kernel_0.4.6_darwin_amd64.tar.gz"
-      sha256 "13d70c94bd433e177dbb25b917869b0bd910f61d43faa142f71a18d38a2b6f26"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.7/kernel_0.4.7_darwin_amd64.tar.gz"
+      sha256 "7e5e9398a00660c984335b102066b1ac9f36240f1b171502fbc53de107e36eca"
 
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.6/kernel_0.4.6_darwin_arm64.tar.gz"
-      sha256 "20fbe2d3a767c637fcb34defb8f50b22424b7b5c0f52a9196e850fd0d3cb1170"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.7/kernel_0.4.7_darwin_arm64.tar.gz"
+      sha256 "61438840ea27d92782da83744ff62ccb9a231fdd2418ec33b95b0862c1597af7"
 
       def install
         bin.install "kernel"
@@ -28,15 +28,15 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.6/kernel_0.4.6_linux_amd64.tar.gz"
-      sha256 "adeafb11b03eb04ca70d0a8619eb4f607f1057390702bef15905c0956650752d"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.7/kernel_0.4.7_linux_amd64.tar.gz"
+      sha256 "5f15e2fa8d0d2f05e648b74b2858a2a60ed222c7d49d770f156713f156fdaf31"
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.6/kernel_0.4.6_linux_arm64.tar.gz"
-      sha256 "a7a145bb20057cbabc85cb5a49fb0081bb9d0145a5efe0d2b459b66f6a160f32"
+      url "https://onkernel-public.s3.us-east-1.amazonaws.com/releases/download/cli/0.4.7/kernel_0.4.7_linux_arm64.tar.gz"
+      sha256 "6f11e334db2d6da48e81592c697078a69bd20b454ca6148536db31f0273395fe"
       def install
         bin.install "kernel"
       end
