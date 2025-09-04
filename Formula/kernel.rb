@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://github.com/onkernel/cli"
-  version "0.6.0"
+  version "0.6.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/onkernel/cli/releases/download/v0.6.0/kernel_0.6.0_darwin_amd64.tar.gz"
-      sha256 "1478a1bd0c66a4e1cabfd65c8aa4a5bb6ba3301d40603408e79a5b2d130f873e"
+      url "https://github.com/onkernel/cli/releases/download/v0.6.1/kernel_0.6.1_darwin_amd64.tar.gz"
+      sha256 "c72560234c0117034f9f3539cee93c61313c16e6ad14fbec8016dea91d197d2d"
 
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/onkernel/cli/releases/download/v0.6.0/kernel_0.6.0_darwin_arm64.tar.gz"
-      sha256 "92fd44acffaac6000acd964fd587f9c8b616076e9641ff1c6fa242f1cdd573a2"
+      url "https://github.com/onkernel/cli/releases/download/v0.6.1/kernel_0.6.1_darwin_arm64.tar.gz"
+      sha256 "63b0cc5c284f8a1579506851a50e24b09f72dcacac8bbbcb92715b7e717322f3"
 
       def install
         bin.install "kernel"
@@ -28,15 +28,15 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/onkernel/cli/releases/download/v0.6.0/kernel_0.6.0_linux_amd64.tar.gz"
-      sha256 "136d712be04e2f783360bf7aa3a0a627f87e59425dcf7865642d10acb88eea0d"
+      url "https://github.com/onkernel/cli/releases/download/v0.6.1/kernel_0.6.1_linux_amd64.tar.gz"
+      sha256 "228b4af7e637963daf1c73a7e45874ad9b3e3ddb7436f3f1167efc2e31d07eff"
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/onkernel/cli/releases/download/v0.6.0/kernel_0.6.0_linux_arm64.tar.gz"
-      sha256 "5c6a5068fa20ac165c5d2b3b783a256c90bc02c5097dd37ce05ceb3505033beb"
+      url "https://github.com/onkernel/cli/releases/download/v0.6.1/kernel_0.6.1_linux_arm64.tar.gz"
+      sha256 "b56a71aacadae54970718e66f43ae07d3897b673a60d19b596cca632ffcb8d5d"
       def install
         bin.install "kernel"
       end
