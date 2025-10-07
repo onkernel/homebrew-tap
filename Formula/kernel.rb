@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://github.com/onkernel/cli"
-  version "0.8.3"
+  version "0.9.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/onkernel/cli/releases/download/v0.8.3/kernel_0.8.3_darwin_amd64.tar.gz"
-      sha256 "2ccb55eee59d77afc349fee8206d076585e905c81598eae891d48803cb912d2d"
+      url "https://github.com/onkernel/cli/releases/download/v0.9.1/kernel_0.9.1_darwin_amd64.tar.gz"
+      sha256 "095407098a594fc77f34828a0599230e17cb17afdc76cc52c4d9a19316184729"
 
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/onkernel/cli/releases/download/v0.8.3/kernel_0.8.3_darwin_arm64.tar.gz"
-      sha256 "bdcd2068188ed3fe1f3210957535f70871e33eb128a3dd400680fa060379df07"
+      url "https://github.com/onkernel/cli/releases/download/v0.9.1/kernel_0.9.1_darwin_arm64.tar.gz"
+      sha256 "c5411e6c8974901ed01ef193d8dd4bb281bdba430b3fc4a86d01a26e9e14c34d"
 
       def install
         bin.install "kernel"
@@ -27,16 +27,16 @@ class Kernel < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onkernel/cli/releases/download/v0.8.3/kernel_0.8.3_linux_amd64.tar.gz"
-      sha256 "2566966ac533b6bd4773126ab8f10f565da51e2a5efaa40e9283e719197b8dc9"
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/onkernel/cli/releases/download/v0.9.1/kernel_0.9.1_linux_amd64.tar.gz"
+      sha256 "7ed1d4a3b2a68ff446fc2fb6eb5d7ece95ccac51248a8b71f87184ba23c16d25"
       def install
         bin.install "kernel"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onkernel/cli/releases/download/v0.8.3/kernel_0.8.3_linux_arm64.tar.gz"
-      sha256 "c56c22cf6b7444a0fcb68b1e0e9135362edf0118bf7c2a08b2a9f9952fc68d8f"
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/onkernel/cli/releases/download/v0.9.1/kernel_0.9.1_linux_arm64.tar.gz"
+      sha256 "c161a5da37a7fec0ac308cd72a56e41b1ae3de01079d67d94cad17593963ae4d"
       def install
         bin.install "kernel"
       end
