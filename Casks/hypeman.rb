@@ -3,7 +3,7 @@ cask "hypeman" do
   name "hypeman"
   desc "orchestrate cloud-hypervisor VMs"
   homepage "https://github.com/onkernel/hypeman"
-  version "0.1.1"
+  version "0.1.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -18,22 +18,22 @@ cask "hypeman" do
   on_macos do
     on_intel do
       url "https://github.com/onkernel/hypeman-cli/releases/download/v#{version}/hypeman_#{version}_macos_amd64.zip"
-      sha256 "d2cce9e915384cf3a7bcba9f35e0340b22629b1488cfe3390a52ce5998b76420"
+      sha256 "592827aad9375d3150fb845330bb3614fe7421d65e6748b8fd883f42c68eea73"
     end
     on_arm do
       url "https://github.com/onkernel/hypeman-cli/releases/download/v#{version}/hypeman_#{version}_macos_arm64.zip"
-      sha256 "bfe396693f2033a83f161fe8f5617e01fd89caeff5b7cb940e666f4bba52dc27"
+      sha256 "2e5398610f34bf27f8c21e2d71079c050f2a2b0bad9d5cb1b5e1010ce96be584"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/onkernel/hypeman-cli/releases/download/v#{version}/hypeman_#{version}_linux_amd64.tar.gz"
-      sha256 "cafbaf5384af2efc710b98134ca54c5e21955f83ac1262df4c276307f1b74d95"
+      sha256 "7ceeb8e34cc9403414fd80411a8c73a2a62cdfb132cf32b1317f21b004f6aea9"
     end
     on_arm do
       url "https://github.com/onkernel/hypeman-cli/releases/download/v#{version}/hypeman_#{version}_linux_arm64.tar.gz"
-      sha256 "4dd48e9199ea9de99e660fdb62ad8ae26ce3005f7b2a2b47fc4d7e85f40ee6e9"
+      sha256 "a2e347de18e82e566dff867fb8f0855872879784d32588358df8612b75ad6869"
     end
   end
 
