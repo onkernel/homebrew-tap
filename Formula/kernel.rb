@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://github.com/kernel/cli"
-  version "0.13.5"
+  version "0.14.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel/cli/releases/download/v0.13.5/kernel_0.13.5_darwin_amd64.tar.gz"
-      sha256 "065622b9ab57a8c9ff87e30cf23e609eb391867016e6b055b9a16679fd825151"
+      url "https://github.com/kernel/cli/releases/download/v0.14.0/kernel_0.14.0_darwin_amd64.tar.gz"
+      sha256 "6a85caa4e4642842c7c72dd4de2b4c12ed4de0506e4c9abcaf638a39e1b5c492"
 
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel/cli/releases/download/v0.13.5/kernel_0.13.5_darwin_arm64.tar.gz"
-      sha256 "54ad106b4c78d259131422e9d325b222b2568884597934a55eded38285327d47"
+      url "https://github.com/kernel/cli/releases/download/v0.14.0/kernel_0.14.0_darwin_arm64.tar.gz"
+      sha256 "97ac9fcd3b3b78deb9ad9495db79458c12b3532bf93b3c4fe2ba2658f8d4ac23"
 
       def install
         bin.install "kernel"
@@ -28,15 +28,15 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.13.5/kernel_0.13.5_linux_amd64.tar.gz"
-      sha256 "6240b10abd4e3e94d82731933cbfbf452da3ee1c1496d97da8660e487d2151c1"
+      url "https://github.com/kernel/cli/releases/download/v0.14.0/kernel_0.14.0_linux_amd64.tar.gz"
+      sha256 "e91ad584aac67cbc2c465bcddfd359dfb31f94fd0bf5ffd38ba930a4a74632fe"
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.13.5/kernel_0.13.5_linux_arm64.tar.gz"
-      sha256 "b2024d20cb09bcac5181dfdb94e07ee3c4d7710bea7e1e401fc97fd16d22e242"
+      url "https://github.com/kernel/cli/releases/download/v0.14.0/kernel_0.14.0_linux_arm64.tar.gz"
+      sha256 "3f9b05618d0da3f34f70cab42f9b48c70113eda064bee212ebac4cf4f3b632c9"
       def install
         bin.install "kernel"
       end
