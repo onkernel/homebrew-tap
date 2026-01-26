@@ -11,7 +11,7 @@ class Hypeman < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kernel/hypeman-cli/releases/download/v0.9.1/hypeman_0.9.1_macos_amd64.zip"
-      sha256 "52fa897111f9a66e06f3b45a8aa110e1fdaf7452626968f08ad7691c9c794a0e"
+      sha256 "b3180efab72ee5f91c126bc88807ac700449ca1e82a370116c9bdbedb8f06e51"
 
       def install
         bin.install "hypeman"
@@ -23,7 +23,7 @@ class Hypeman < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kernel/hypeman-cli/releases/download/v0.9.1/hypeman_0.9.1_macos_arm64.zip"
-      sha256 "c55b086faebde4f653d93ff22f92e6135f0b8ebde1513511a81e7a744c27ee69"
+      sha256 "b7aade4fc5f0d924ab2f49d2f56a7dc090f6d3fa22443fc3c5727a9e595921d0"
 
       def install
         bin.install "hypeman"
@@ -38,7 +38,7 @@ class Hypeman < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kernel/hypeman-cli/releases/download/v0.9.1/hypeman_0.9.1_linux_amd64.tar.gz"
-      sha256 "eda1994867c91b9e466281e551b5b573de11ba4b519a66b74550a6d0e3a62770"
+      sha256 "d4c75eda16dd202a88e90e9e491f96e28fb5b75226b0d2f16b3f70eb55bad713"
       def install
         bin.install "hypeman"
         bash_completion.install "completions/hypeman.bash" => "hypeman"
@@ -49,7 +49,7 @@ class Hypeman < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/kernel/hypeman-cli/releases/download/v0.9.1/hypeman_0.9.1_linux_armv6.tar.gz"
-      sha256 "f553925eeedbd61acda013c775935dfc9506ae8c9264db4b38fc7debc6f7f0ed"
+      sha256 "0389a628de98363be6a7cfae708413405ca4795e5df00509bebf70f3bc3a954b"
       def install
         bin.install "hypeman"
         bash_completion.install "completions/hypeman.bash" => "hypeman"
@@ -60,7 +60,7 @@ class Hypeman < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kernel/hypeman-cli/releases/download/v0.9.1/hypeman_0.9.1_linux_arm64.tar.gz"
-      sha256 "dc67e1155a7031e47e1914c80f20171c3bb732d5ada36b1787409e99868269c8"
+      sha256 "0577767e56a847ad7c927cf84756603b20539edfb7e52a98ded45c275d0399be"
       def install
         bin.install "hypeman"
         bash_completion.install "completions/hypeman.bash" => "hypeman"
