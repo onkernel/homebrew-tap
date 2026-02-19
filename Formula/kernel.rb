@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://github.com/kernel/cli"
-  version "0.14.10"
+  version "0.14.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel/cli/releases/download/v0.14.10/kernel_0.14.10_darwin_amd64.tar.gz"
-      sha256 "bce9064caae8fe4fb6fc4fdc56958cc3f27122418a44e090c6c4c0048c3a91aa"
+      url "https://github.com/kernel/cli/releases/download/v0.14.11/kernel_0.14.11_darwin_amd64.tar.gz"
+      sha256 "e0fbe318bcaffa9d517fea563a08367a7985d1dd20b208f08792afbed217d035"
 
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel/cli/releases/download/v0.14.10/kernel_0.14.10_darwin_arm64.tar.gz"
-      sha256 "376e1ecc5f8804fc375f3c0469cd50a53bd761aced3416008623c41afb61311f"
+      url "https://github.com/kernel/cli/releases/download/v0.14.11/kernel_0.14.11_darwin_arm64.tar.gz"
+      sha256 "e7c40c478cff293ab159fcc5a39c55f20b8142da1efd1ec2c1ad7149a9008525"
 
       def install
         bin.install "kernel"
@@ -28,15 +28,15 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.14.10/kernel_0.14.10_linux_amd64.tar.gz"
-      sha256 "b0f308a7561c6fe56d0012fbabc1b70b06255a9a32a9c0d352e11b2be85f773b"
+      url "https://github.com/kernel/cli/releases/download/v0.14.11/kernel_0.14.11_linux_amd64.tar.gz"
+      sha256 "dd5fbadf8aab67f9f0baa1d9c72c362322b023a5a1ed555235632f120352a9f0"
       def install
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.14.10/kernel_0.14.10_linux_arm64.tar.gz"
-      sha256 "b757b47caed47306c36eebf81c094091813666508d98ecf81a17de9c0c2b0ce3"
+      url "https://github.com/kernel/cli/releases/download/v0.14.11/kernel_0.14.11_linux_arm64.tar.gz"
+      sha256 "869bf60791005f01ec9c44546caf15d03c7c5e166bb12fb577164c00d058ea57"
       def install
         bin.install "kernel"
       end
