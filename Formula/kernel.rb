@@ -5,22 +5,22 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://github.com/kernel/cli"
-  version "0.14.12"
+  version "0.15.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel/cli/releases/download/v0.14.12/kernel_0.14.12_darwin_amd64.tar.gz"
-      sha256 "62b20fccca1faab5d2257f7a5a00cc05c802c67522eaba92a7da4e77ec909b99"
+      url "https://github.com/kernel/cli/releases/download/v0.15.0/kernel_0.15.0_darwin_amd64.tar.gz"
+      sha256 "10e8251e1e4f5190e3eef0f5c6be1b016ea9d6851ed61a462bf2783af447d9f0"
 
-      def install
+      define_method(:install) do
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel/cli/releases/download/v0.14.12/kernel_0.14.12_darwin_arm64.tar.gz"
-      sha256 "de7d1f26109d3a352788cfdbc2da6ad54aa2fe52f4fd0cc8575906e73996b6ec"
+      url "https://github.com/kernel/cli/releases/download/v0.15.0/kernel_0.15.0_darwin_arm64.tar.gz"
+      sha256 "fdda475c6e974566bdd086334532bbae0a35fc48892e43e4a07936cb27a5e36a"
 
-      def install
+      define_method(:install) do
         bin.install "kernel"
       end
     end
@@ -28,16 +28,16 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.14.12/kernel_0.14.12_linux_amd64.tar.gz"
-      sha256 "fa7ea2edd01bde4d3b9dbbe3e5dd8e6389cf6effec89e8f29c024c8a3c241765"
-      def install
+      url "https://github.com/kernel/cli/releases/download/v0.15.0/kernel_0.15.0_linux_amd64.tar.gz"
+      sha256 "805d35a202769709295148a62990ae8bd1f43b5665f8cf34ab28e9a18fb780bb"
+      define_method(:install) do
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.14.12/kernel_0.14.12_linux_arm64.tar.gz"
-      sha256 "b6b9c684ab19a19872908c8d17c5bead2a574be5a75191d54670977c39704402"
-      def install
+      url "https://github.com/kernel/cli/releases/download/v0.15.0/kernel_0.15.0_linux_arm64.tar.gz"
+      sha256 "fdbd7b43f35704e8c3ca868c299d3e4b9af88a128cc4d668f63d0c64e8bfb90a"
+      define_method(:install) do
         bin.install "kernel"
       end
     end
