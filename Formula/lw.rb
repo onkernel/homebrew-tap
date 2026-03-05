@@ -5,13 +5,13 @@
 class Lw < Formula
   desc "CLI for the Leaseweb API"
   homepage "https://github.com/kernel/leaseweb-cli"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.0/lw_0.2.0_macos_amd64.zip"
-      sha256 "3481a6fdfc0502282c57afd2e2baa8091e1aa5f6bc4e8ceb4433e1389fb1e42e"
+      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.1/lw_0.2.1_macos_amd64.zip"
+      sha256 "ef76b63817d2d0a4975794986cfdcf0da1e1af419f6dc81c03e6cd1209cc89da"
 
       define_method(:install) do
         bin.install "lw"
@@ -21,8 +21,8 @@ class Lw < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.0/lw_0.2.0_macos_arm64.zip"
-      sha256 "e1224b4ef079cb56130a9564cc122272d26767ee091c0ab87ad6a66795c68a71"
+      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.1/lw_0.2.1_macos_arm64.zip"
+      sha256 "d52d99a04979a4c564f3d72c0af5218017c18efe954748c9079d2de774478817"
 
       define_method(:install) do
         bin.install "lw"
@@ -35,8 +35,8 @@ class Lw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.0/lw_0.2.0_linux_amd64.tar.gz"
-      sha256 "566b1a0793ad8d17fef9ba11edc1f65545356b0bcdfc27713e52a91d1b366eca"
+      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.1/lw_0.2.1_linux_amd64.tar.gz"
+      sha256 "060db5eab29f1d425b38fc7666c08f6ada407b4a934d5ccf3206ea4976c83549"
       define_method(:install) do
         bin.install "lw"
         bash_completion.install "completions/lw.bash" => "lw"
@@ -45,8 +45,8 @@ class Lw < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.0/lw_0.2.0_linux_armv6.tar.gz"
-      sha256 "f3d9667bd5b8a1535a70e9079673ee8f420b38aaaab32fecde27492aa3327c4e"
+      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.1/lw_0.2.1_linux_armv6.tar.gz"
+      sha256 "1c3bfbbc3af45d69e0d0dff3b9287388b52a0187fc8773da707bc45ac7eb5dbc"
       define_method(:install) do
         bin.install "lw"
         bash_completion.install "completions/lw.bash" => "lw"
@@ -55,8 +55,8 @@ class Lw < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.0/lw_0.2.0_linux_arm64.tar.gz"
-      sha256 "063f92a5777bd60cfd48b7f0e655a96c5d58ad27f3ae6ade5da96f7b99195421"
+      url "https://github.com/kernel/leaseweb-cli/releases/download/v0.2.1/lw_0.2.1_linux_arm64.tar.gz"
+      sha256 "6f904d60ec687cefaa83f9d0013731f8d280c2054a4a27738e4aec190c32a1fc"
       define_method(:install) do
         bin.install "lw"
         bash_completion.install "completions/lw.bash" => "lw"
