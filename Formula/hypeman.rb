@@ -5,13 +5,13 @@
 class Hypeman < Formula
   desc "orchestrate cloud-hypervisor VMs"
   homepage "https://github.com/kernel/hypeman"
-  version "0.17.0"
+  version "0.18.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel/hypeman-cli/releases/download/v0.17.0/hypeman_0.17.0_macos_amd64.zip"
-      sha256 "5eb27ee1508ab46c763a0cb7a722884d2dbf2c4d37a2268137738b0159caecdc"
+      url "https://github.com/kernel/hypeman-cli/releases/download/v0.18.0/hypeman_0.18.0_macos_amd64.zip"
+      sha256 "8dc7f9a619b2edfbf4b1b8061778b5683f5a9fe0f3cd5128d85c848b78eef967"
 
       define_method(:install) do
         bin.install "hypeman"
@@ -22,8 +22,8 @@ class Hypeman < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel/hypeman-cli/releases/download/v0.17.0/hypeman_0.17.0_macos_arm64.zip"
-      sha256 "cd3c3672ca4cd70dc265f9c5b5bb1d831fbd1cf7c8352f221dd503117779dee2"
+      url "https://github.com/kernel/hypeman-cli/releases/download/v0.18.0/hypeman_0.18.0_macos_arm64.zip"
+      sha256 "c553067160c3e926884e2be399a6fb5da1aa269096797a95e4216bc2d734c71b"
 
       define_method(:install) do
         bin.install "hypeman"
@@ -37,8 +37,8 @@ class Hypeman < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/hypeman-cli/releases/download/v0.17.0/hypeman_0.17.0_linux_amd64.tar.gz"
-      sha256 "b587cea5c2b9be9fe06b1fe2ce5642074773309e426002bace3e7b3c3216dddc"
+      url "https://github.com/kernel/hypeman-cli/releases/download/v0.18.0/hypeman_0.18.0_linux_amd64.tar.gz"
+      sha256 "c98fff8b6240f389e31d09ce47beebd87cb47a46cc98b2c3b4e6c55399dab7cb"
       define_method(:install) do
         bin.install "hypeman"
         bash_completion.install "completions/hypeman.bash" => "hypeman"
@@ -48,8 +48,8 @@ class Hypeman < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/hypeman-cli/releases/download/v0.17.0/hypeman_0.17.0_linux_armv6.tar.gz"
-      sha256 "10fec9b2d807415b4898225d48098b2771e931264041a3ac2a44e2ecc4f4cadc"
+      url "https://github.com/kernel/hypeman-cli/releases/download/v0.18.0/hypeman_0.18.0_linux_armv6.tar.gz"
+      sha256 "ec3fbb62776a4231bb92b1b0409ed3d6835dc80485b46b2fa56c0c136d7a8a95"
       define_method(:install) do
         bin.install "hypeman"
         bash_completion.install "completions/hypeman.bash" => "hypeman"
@@ -59,8 +59,8 @@ class Hypeman < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/hypeman-cli/releases/download/v0.17.0/hypeman_0.17.0_linux_arm64.tar.gz"
-      sha256 "79d20acdca5d17879eb10a9778c891a42a3efa40280e98515e9e8ed47a1cf4a3"
+      url "https://github.com/kernel/hypeman-cli/releases/download/v0.18.0/hypeman_0.18.0_linux_arm64.tar.gz"
+      sha256 "28ee43c27fa3f15f8b3715deedc296a1dc561683dbf3a52341adfdb87dfe6c00"
       define_method(:install) do
         bin.install "hypeman"
         bash_completion.install "completions/hypeman.bash" => "hypeman"
