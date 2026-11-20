@@ -5,20 +5,20 @@
 class Kernel < Formula
   desc "Kernel CLI"
   homepage "https://github.com/kernel/cli"
-  version "0.52.0"
+  version "0.53.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel/cli/releases/download/v0.52.0/kernel_0.52.0_darwin_amd64.tar.gz"
-      sha256 "d3a4be801234071ca53b8dd5c552020b895b9fd0ca43797f1caab6be03f60ca5"
+      url "https://github.com/kernel/cli/releases/download/v0.53.0/kernel_0.53.0_darwin_amd64.tar.gz"
+      sha256 "534c176c7b6fb8eaf462e9433d6cfeb5f2b2082dd75582cbc0d626ead21544f5"
 
       define_method(:install) do
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel/cli/releases/download/v0.52.0/kernel_0.52.0_darwin_arm64.tar.gz"
-      sha256 "eb0b08c14ff88d120ea635537474cd126c1540c04d2065dcd7f4c07b3f5d79b3"
+      url "https://github.com/kernel/cli/releases/download/v0.53.0/kernel_0.53.0_darwin_arm64.tar.gz"
+      sha256 "e2072c09042d813c01fbf5e810f43362ce836144224332920dd9453a1750ff44"
 
       define_method(:install) do
         bin.install "kernel"
@@ -28,15 +28,15 @@ class Kernel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.52.0/kernel_0.52.0_linux_amd64.tar.gz"
-      sha256 "ee431d13d50fdaaffca68db996b7cfc965bc257d5944518667c676cc3ee1be39"
+      url "https://github.com/kernel/cli/releases/download/v0.53.0/kernel_0.53.0_linux_amd64.tar.gz"
+      sha256 "b08bc3418ad6c8404a2bf8a9eff2702086f1ba547fa3809cac9fe9c243ef8694"
       define_method(:install) do
         bin.install "kernel"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel/cli/releases/download/v0.52.0/kernel_0.52.0_linux_arm64.tar.gz"
-      sha256 "0340da8c3814c6d1a27b403b82990be3008dee280c438d6bb443461c6e80b130"
+      url "https://github.com/kernel/cli/releases/download/v0.53.0/kernel_0.53.0_linux_arm64.tar.gz"
+      sha256 "0884049585eb483dc7cbd1771f6fdfc4d1be77e4eece4f4965dfb2faf1ea3958"
       define_method(:install) do
         bin.install "kernel"
       end
